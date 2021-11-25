@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {quizzSongs} from './bddSongs';
 import {useNavigate, useParams} from 'react-router-dom';
 
@@ -13,7 +13,6 @@ function Game({setScore, score}) {
     const [ userChoice, setUserChoice ] = useState();
     const [ message, setMessage ] = useState('');
     
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
     function displayVideo(choice) {
             setIsPlaying(!isPlaying);

@@ -1,17 +1,28 @@
 import React, {useState} from 'react';
+import { Routes, BrowserRouter, Route, useNavigate, useParams } from 'react-router-dom';
+
 import './App.css';
 // import TextReading from './components/TextReading';
 import Game from './components/TestAth'
-import { quizzSongs } from './components/bddSongs';
+
 
 function App() {
   const [ score, setScore ] = useState(0);
+  let { id } = useParams();
+
+  let navigate = useNavigate();
+
 
   return (
-    <div className="App">
-      <Game setScore={setScore} score={score} />
-      <p>Score : {score}</p>
+    <BrowserRouter>
+        <Routes>
+          <div className="App">
+          {/* <Route exact path ='/:id' element={<}> */}
+           <Game setScore={setScore} score={score} />
+           <p>Score : {score}</p>
     </div>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
