@@ -1,15 +1,15 @@
 .HomeTitle{
-   margin-top: 60px;
+   margin-top: 80px;
    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     color: #f8B206;
-    font-size: 4em;
+    font-size: 3.5em;
 }
 
 .HomeText{
     color: white;
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-align: center;
     
 }
@@ -18,23 +18,23 @@
     color: #d8222d;
     display: flex;
     margin: auto;
-    width: 80px;
+    width: 60px;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .HomeH2{
 color: #d8222d;
 font-size: 2em;
 text-align: center;
-margin-bottom: 30px;
+margin-bottom: 10px;
 }
 
 .HomeLi{
-    margin-left: 170px;
-    margin-right: 170px;
+    margin-left: 100px;
+    margin-right: 100px;
     color: #237ab4;
-    font-size: 1.3em;
+    font-size: 1em;
     margin-bottom: 5px;
 
 }
@@ -54,6 +54,6 @@ cursor: pointer;
 }
 
 .HomePlayImg{
-    width: 100px;
+    width: 80px;
     
 }

@@ -206,8 +206,7 @@ iframe::-webkit-scrollbar {
 .logo{
   display: flex;
   z-index: 100;
-  margin-left: 2vh;
-  width: 370px;
+  width: 330px;
   height: auto;
   position: absolute;
 }
@@ -216,14 +215,14 @@ iframe::-webkit-scrollbar {
   position: absolute;
   z-index: 100;
   margin-top: 92vh;
-  margin-left: 38vh;
-  width: 490px;
+  margin-left: 42vh;
+  width: 330px;
 }
 
 .queen{
   position: absolute;
-margin-left: 84.5vw;
+margin-left: 87vw;
 margin-top: 10vh;
-  width: 280px;
+  width: 180px;
   z-index: 100;
 }
