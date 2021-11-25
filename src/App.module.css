@@ -1,3 +1,9 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .mainContainer {
   margin: 0;
   position: absolute;
@@ -197,3 +203,26 @@ iframe::-webkit-scrollbar {
   height: 40px;
 }
 
+.logo{
+  display: flex;
+  z-index: 100;
+  width: 330px;
+  height: auto;
+  position: absolute;
+}
+
+.footer{
+  position: absolute;
+  z-index: 100;
+  margin-top: 92vh;
+  margin-left: 42vh;
+  width: 330px;
+}
+
+.queen{
+  position: absolute;
+margin-left: 87vw;
+margin-top: 10vh;
+  width: 180px;
+  z-index: 100;
+}
