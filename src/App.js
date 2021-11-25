@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
 import { Routes, BrowserRouter, Route, useParams } from 'react-router-dom';
 
-import './App.css';
-// import TextReading from './components/TextReading';
 import Game from './components/TestAth'
+import Home from './components/Home'
+import styles from './App.module.css';
+import Logo from './assets/logodiag.png';
+import Footer from './assets/Footer.png';
+import Queen from './assets/queen.png';
 
 
 function App() {
@@ -11,17 +14,64 @@ function App() {
   let { id } = useParams();
 
   return (
+
     <BrowserRouter>
         <Routes>
           <Route path ='/:id' element={<Game num={id} setScore={setScore} score={score}/>}></Route>
           
         </Routes>
-          <div className="App">
-           {/* <Game setScore={setScore} score={score} /> */}
-           <p>Score : {score}</p>
+  <div className={styles.mainContainer}>
+    <img src={Logo} alt="test aveugle logo" className={styles.logo} />
+    <img src={Queen} alt="portrait of Queen Elizabeth" className={styles.queen} />
+      <div className={styles.background}></div>
+      <div className={styles.tv1}>
+      <div className={styles.screen1}>
+        <div className={styles.glass1}>
+        <Home />
+        </div>
+      </div>
+      <div className={styles.controls}>
+        <div className={styles.panel}>
+          <div className={styles.dial}>
+            <div className={styles.handle}></div>
+            </div>
+            <div className={styles.acdc}>AD&bull;DC</div>
+            <div className={styles.dial}>
+            <div className={styles.handle}></div>
+            </div>
+            <div className={styles.knobLabels}>
+              <span>BRIGHT</span>
+              <span>ON VOL</span>
+            </div>
           </div>
+          <div className={styles.knobs}>
+            <div className={styles.knob}></div>
+            <div className={styles.knob}></div>
+          </div>
+          <div className={styles.speaker}>
+            <div className={styles.hole}></div>
+            <div className={styles.hole}></div>
+            <div className={styles.hole}></div>
+            <div className={styles.hole}></div>
+            <div className={styles.hole}></div>
+            <div className={styles.hole}></div>
+            <div className={styles.hole}></div>
+            <div className={styles.hole}></div>
+            <div className={styles.hole}></div>
+            <div className={styles.hole}></div>
+            <div className={styles.hole}></div>
+            <div className={styles.hole}></div>
+            <div className={styles.hole}></div>
+            <div className={styles.hole}></div>
+          </div>
+        </div>
+      <div className={styles.legs}></div>
+      <p>Score : {score}</p>
+      <img src={Footer} alt="message with love" className={styles.footer} />
+    </div>
+  </div>
     </BrowserRouter>
-  );
-}
+);
+  }
 
 export default App;

@@ -114,7 +114,7 @@ const quizzSongs = [
     goodVideo: 'https://youtu.be/6Ejga4kJUts?t=49',
     wrongVideo: 'https://youtu.be/kJQP7kiw5Fk?t=83',
     wrongResponse1: 'Sweet Child O\' Mine - Guns N\' Roses',
-    wrongResponse2: 'The sond of silence - Simon & Garfunkel',
+    wrongResponse2: 'The sound of silence - Simon & Garfunkel',
     },
   ];
 
