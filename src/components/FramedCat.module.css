@@ -1,0 +1,27 @@
+.frame {
+  position: absolute;
+  bottom: 0vh;
+  right: 2vw;
+  background-color: #630;
+  height: 18vh;
+  width: 29vh;
+}
+
+.CatPic {
+  background-image: url("https://img.le-dictionnaire.com/chaton-tigre.jpg");
+  height: 15vh;
+  width: 26vh;
+  background-position: center;
+  background-size: cover;
+  margin: 1.5vh;
+  box-shadow: inset 0em 0em 0.7em black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.score {
+  margin: 0;
+  margin-right: 1vw;
+  text-align: right;
+  font-size: 50px;
+}

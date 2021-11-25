@@ -1,6 +1,7 @@
 import React from 'react';
 
 // import Home from './components/Home'
+import FramedCat from './components/FramedCat';
 
 import styles from './App.module.css';
 
@@ -51,6 +52,7 @@ function App() {
         </div>
       <div className={styles.legs}></div>
     </div>
+    <FramedCat />
   </div>
 );
 }
