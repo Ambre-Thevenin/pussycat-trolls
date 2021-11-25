@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  background-color: #e9e3d4;
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+  height: 100vh;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: -2;
+}
+
+.tv1 {
+  background: #aaa;
+  border: 4px solid #433;
+  border-radius: 25px;
+  box-shadow: inset 0 5px 5px #ddd, inset 5px 0 5px #555, inset -5px 0 5px #555,
+    inset 0 -5px 5px #555;
+  display: -webkit-flex;
+  display: flex;
+  font-family: Arial;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: right;
+  align-items: center;
+  margin: 150px auto;
+  position: relative;
+  padding: 15px 15px 10px 25px;
+  width: 680px;
+  height: 460px;
+}
+
+.antennas {
+  position: absolute;
+  top: -124px;
+  right: 90px;
+  width: 140px;
+  height: 120px;
+}
+
+.tip {
+  background: #888 radial-gradient(transparent, #555);
+  border-radius: 50%;
+  margin-left: -3px;
+  width: 12px;
+  height: 12px;
+}
+  
+.left {
+  left: 0;
+  transform: rotate(-15deg);
+  background: #888 linear-gradient(90deg, #666, transparent, #666);
+  position: absolute;
+  width: 5px;
+  height: 130px;
+  transform-origin: 0% 0%;
+  z-index: -1;
+}
+
+.screen1 {
+  border: 1px solid #433;
+  border-radius: 20px;
+  box-shadow: inset 0 10px 5px #444, inset 10px 0 5px #666,
+    inset -10px 0 5px #888, inset 0 -10px 5px #888;
+  width: 77%;
+  height: 95%;
+}
+
+.glass1 {
+  background: #666 linear-gradient(transparent, #333);
+  border-top: 1px solid #433;
+  border-bottom: 1px solid #433;
+  border-radius: 67% / 10%;
+  box-shadow: inset 0 12px 4px #000, inset 0 -6px 4px #000, inset 6px 0 4px #000,
+    inset -6px 0 4px #000;
+  margin: 3% auto;
+  overflow: hidden;
+  position: relative;
+  width: 93%;
+  height: 93%;
+  z-index: 2;
+}
+
+iframe {
+  border: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+iframe::-webkit-scrollbar {
+  display: none;
+}
+
+.controls {
+  background: #630;
+  border: 1px solid #210;
+  border-radius: 20px;
+  width: 20%;
+  height: 100%;
+}
+
+.panel {
+  background: #ccc linear-gradient(90deg, transparent, #888);
+  border-radius: 10px;
+  box-shadow: inset 0 3px 4px #000;
+  margin: 5% auto;
+  padding: 5px 0;
+  width: 90%;
+  height: 56%;
+}
+
+.dial {
+  background: #aaa
+    radial-gradient(
+      transparent,
+      transparent 35%,
+      #000 35%,
+      #000 38%,
+      #bbb 38%,
+      #999 60%
+    );
+  border-radius: 50%;
+  box-shadow: inset 0 8px 2px #555, inset -6px 0 2px #555, inset 0 -6px 2px #555,
+    inset 6px 0 2px #555;
+  margin: auto;
+  position: relative;
+  width: 110px;
+  height: 110px;
+}
+
+.handle {
+  background: #444;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #000;
+  position: absolute;
+  top: 50px;
+  left: 28px;
+  width: 50px;
+  height: 8px;
+}
+
+.acdc {
+  font-size: 9pt;
+  padding: 5px 10px;
+  text-align: right;
+}
+
+.knobLabels {
+  font-size: 6pt;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 4px;
+}
+
+.knobs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: right;
+  margin-bottom: 5px;
+}
+
+.knob {
+  background: #aaa
+    radial-gradient(
+      transparent 5px,
+      #444 5px,
+      transparent 8px,
+      #888 10px,
+      #777 11px,
+      transparent 11px,
+      transparent
+    );
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+}
+
+.speaker {
+  margin: auto;
+  width: 90%;
+  height: 30%;
+}
+
+.hole {
+  background: #000;
+  border: 1px solid #420;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 3px;
+}
+
+.legs {
+  background: linear-gradient(
+    90deg,
+    transparent 10%,
+    #210 10%,
+    #210 25%,
+    transparent 25%,
+    transparent 75%,
+    #210 75%,
+    #210 90%,
+    transparent 90%,
+    transparent
+  );
+  position: absolute;
+  left: 0;
+  bottom: -44px;
+  width: 100%;
+  height: 40px;
+}
+
+.logo{
+  display: flex;
+  z-index: 3;
+  margin-top: -18vh;
+  margin-left: 2vh;
+  width: 420px;
+  height: auto;
+  position: absolute;
+}
+
+.footer{
+  position: absolute;
+  z-index: 3;
+  margin-top: 90vh;
+  margin-left: 18vh;
+  width: 400px;
+}

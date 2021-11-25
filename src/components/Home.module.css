@@ -1,0 +1,17 @@
+.HomeTitle{
+    display: flex;
+justify-content: center;
+    color: #f8B206;
+}
+
+.HomeText{
+    color: white;
+}
+
+.HomeSoundSpeaker{
+    color: #d8222d;
+}
+
+.HomeH2{
+color: #e97C1C;
+}
