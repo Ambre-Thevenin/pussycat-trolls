@@ -1,5 +1,6 @@
 import React from "react";
 import Sound from '../assets/volume_up.svg'
+import Play from '../assets/play_circle.svg'
 
 function Home(){
 
@@ -16,7 +17,7 @@ return(
             <li>Vous aurez 3 propositions de chansons.</li>
             <li>A vous de trouver la bonne réponse pour découvrir l'extrait vidéo correspondant ! </li>
         </ul>
-        <button>PLAY</button>
+        <button><img src={Play} alt="playbutton"/></button>
     </div>
 )
 };
