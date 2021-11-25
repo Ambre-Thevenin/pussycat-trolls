@@ -10,7 +10,7 @@ function Game({ setScore, score , num}) {
 
     const [songID, setSongID ] = useState(parseInt(id));
     const [ song, setSong ] = useState(quizzSongs[songID]);
-    const [isPlaying, setIsPlaying] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(false);
     const [ userChoice, setUserChoice ] = useState();
     const [ message, setMessage ] = useState('');
     
@@ -59,7 +59,7 @@ function Game({ setScore, score , num}) {
                 <div>
                     <h2>{message}</h2>
                     <iframe width="560" height="315" src={userChoice} title="Dailymotion" frameborder="0" allow="autoplay clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <button onClick={goForward}> GO </button>
+                    <button onClick={goForward}> Prochaine chanson </button>
                 </div>
                 }
             </div>
