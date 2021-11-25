@@ -13,11 +13,6 @@ function App() {
     <img src={Logo} alt="test aveugle logo" className={styles.logo} />
       <div className={styles.background}></div>
       <div className={styles.tv1}>
-        <div className={styles.antennas}>
-          <div className={styles.left}>
-          <div className={styles.tip}></div>
-        </div>
-      </div>
       <div className={styles.screen1}>
         <div className={styles.glass1}>
         <Home />
