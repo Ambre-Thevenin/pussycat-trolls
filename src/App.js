@@ -9,14 +9,9 @@ function App() {
     <div className={styles.mainContainer}>
       <div className={styles.background}></div>
       <div className={styles.tv1}>
-        <div className={styles.antennas}>
-          <div className={styles.left}>
-          <div className={styles.tip}></div>
-        </div>
-      </div>
       <div className={styles.screen1}>
         <div className={styles.glass1}>
-          <iframe title='screen' allowfullscreen='' height='410' scrolling='no' src='' width='100%'></iframe>
+          <iframe title='screen' allowfullscreen='' height='550' scrolling='no' src='' width='100%'></iframe>
         </div>
       </div>
       <div className={styles.controls}>
