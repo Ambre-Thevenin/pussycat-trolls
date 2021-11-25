@@ -1,4 +1,5 @@
 import React from "react";
+import {useNavigate} from 'react-router-dom';
 
 import styles from './Home.module.css';
 import Sound from '../assets/volume_up.png';
@@ -6,6 +7,11 @@ import Play from '../assets/play_pink.png';
 
 function Home(){
 
+    let navigate = useNavigate();
+
+    function playGame(){
+        navigate("/0");
+    }
 return(
     <div>
         <h1 className={styles.HomeTitle}>Apprenez l'anglais ! </h1>
@@ -19,7 +25,7 @@ return(
             <li className={styles.HomeLi}><span className={styles.HomeSpan}>Vous aurez 3 propositions de chansons.</span></li>
             <li className={styles.HomeLi}><span className={styles.HomeSpan}>A vous de trouver la bonne réponse pour découvrir l'extrait vidéo correspondant ! </span></li>
         </ul>
-        <button className={styles.HomePlayButton}><img src={Play} alt="playbutton" className={styles.HomePlayImg}/></button>
+        <button onClick={playGame} className={styles.HomePlayButton}><img src={Play} alt="playbutton" className={styles.HomePlayImg}/></button>
     </div>
 )
 };

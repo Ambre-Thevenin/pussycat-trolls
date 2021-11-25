@@ -1,15 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { Routes, BrowserRouter, Route, useParams } from 'react-router-dom';
 
+import Game from './components/TestAth'
 import Home from './components/Home'
-
 import styles from './App.module.css';
 import Logo from './assets/logodiag.png';
 import Footer from './assets/Footer.png';
 import Queen from './assets/queen.png';
 
+
 function App() {
+  const [ score, setScore ] = useState(0);
+  let { id } = useParams();
+
   return (
-  
+
+
   <div className={styles.mainContainer}>
     <img src={Logo} alt="test aveugle logo" className={styles.logo} />
     <img src={Queen} alt="portrait of Queen Elizabeth" className={styles.queen} />
@@ -17,7 +23,12 @@ function App() {
       <div className={styles.tv1}>
       <div className={styles.screen1}>
         <div className={styles.glass1}>
-        <Home />
+        <BrowserRouter>
+        <Routes>
+          <Route exact path='/' element={<Home />}></Route>
+          <Route path ='/:id' element={<Game num={id} setScore={setScore} score={score}/>}></Route>
+        </Routes>
+        </BrowserRouter>
         </div>
       </div>
       <div className={styles.controls}>
@@ -56,10 +67,12 @@ function App() {
           </div>
         </div>
       <div className={styles.legs}></div>
+      <p>Score : {score}</p>
       <img src={Footer} alt="message with love" className={styles.footer} />
     </div>
   </div>
+
 );
-}
+  }
 
 export default App;
