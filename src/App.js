@@ -1,17 +1,23 @@
 import React from 'react';
 
-// import Home from './components/Home'
+import Home from './components/Home'
 
 import styles from './App.module.css';
+import Logo from './assets/logodiag.png';
+import Footer from './assets/Footer.png';
+import Queen from './assets/queen.png';
 
 function App() {
   return (
-    <div className={styles.mainContainer}>
+  
+  <div className={styles.mainContainer}>
+    <img src={Logo} alt="test aveugle logo" className={styles.logo} />
+    <img src={Queen} alt="portrait of Queen Elizabeth" className={styles.queen} />
       <div className={styles.background}></div>
       <div className={styles.tv1}>
       <div className={styles.screen1}>
         <div className={styles.glass1}>
-          <iframe title='screen' allowfullscreen='' height='550' scrolling='no' src='' width='100%'></iframe>
+        <Home />
         </div>
       </div>
       <div className={styles.controls}>
@@ -50,6 +56,7 @@ function App() {
           </div>
         </div>
       <div className={styles.legs}></div>
+      <img src={Footer} alt="message with love" className={styles.footer} />
     </div>
   </div>
 );
