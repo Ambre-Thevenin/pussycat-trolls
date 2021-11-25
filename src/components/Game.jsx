@@ -43,9 +43,10 @@ function Game({ setScore, score , num}) {
 
     function goForward() {
         setSongID(parseInt(id)+1)
-        console.log(songID);
     }
 
+    const responses = [song.title, song.wrongResponse1, song.wrongResponse2]
+    const shuffleResponses = responses.sort(()=> Math.random() - 0.5);
 
     return (
         <div>
@@ -53,9 +54,10 @@ function Game({ setScore, score , num}) {
             <div>
                 <TextReading lyrics={song.lyricsFR} />
                 <h2>Quelle est cette chanson?</h2>
-                <div onClick={()=>displayVideo(song.title)}><p>{song.title}</p></div>
-                <div onClick={()=>displayVideo(song.wrongResponse1)}><p>{song.wrongResponse1}</p></div>
-                <div onClick={()=>displayVideo(song.wrongResponse2)}><p>{song.wrongResponse2}</p></div></div> : 
+                <div onClick={()=>displayVideo(shuffleResponses[0])}><p>{shuffleResponses[0]}</p></div>
+                <div onClick={()=>displayVideo(shuffleResponses[1])}><p>{shuffleResponses[1]}</p></div>
+                <div onClick={()=>displayVideo(shuffleResponses[2])}><p>{shuffleResponses[2]}</p></div>
+                </div> : 
                 <div>
                     <h2>{message}</h2>
                     <iframe width="560" height="315" src={userChoice} title="Dailymotion" frameborder="0" allow="autoplay clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
