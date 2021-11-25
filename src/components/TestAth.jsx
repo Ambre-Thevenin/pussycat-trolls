@@ -1,18 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {quizzSongs} from './bddSongs';
 import {useNavigate, useParams} from 'react-router-dom';
 
 
-function Game({setScore, score}) {
+function Game({ setScore, score , num}) {
     let navigate = useNavigate();
-    let {id} = useParams();
+    let { id } = useParams();
 
-
-    const [ song, setSong ] = useState(quizzSongs[id]);
+    const [songID, setSongID ] = useState(parseInt(id));
+    const [ song, setSong ] = useState(quizzSongs[songID]);
     const [isPlaying, setIsPlaying] = useState(true);
     const [ userChoice, setUserChoice ] = useState();
     const [ message, setMessage ] = useState('');
     
+
+    useEffect(() => {
+        if (songID < 13) {
+        navigate(`/${songID}`)
+        setIsPlaying(!isPlaying)
+        setSong(quizzSongs[songID])
+        }
+        else {
+            navigate('/end');
+        }
+    },[songID])
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     function displayVideo(choice) {
             setIsPlaying(!isPlaying);
@@ -29,14 +41,14 @@ function Game({setScore, score}) {
         }
 
     function goForward() {
-        navigate(`/${id+1}`);
-        setSong(quizzSongs[id+1]);
+        setSongID(parseInt(id)+1)
+        console.log(songID);
     }
 
 
     return (
         <div>
-            {isPlaying ? 
+            {isPlaying && song ? 
             <div>
                 <h2>Quelle est cette chanson?</h2>
                 <div onClick={()=>displayVideo(song.title)}><p>{song.title}</p></div>
@@ -45,9 +57,9 @@ function Game({setScore, score}) {
                 <div>
                     <h2>{message}</h2>
                     <iframe width="560" height="315" src={userChoice} title="YouTube video player" frameborder="0" allow="autoplay clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                </div>}
-            <button onClick={()=> goForward()}></button>
+                    <button onClick={goForward}> GO </button>
+                </div>
+                }
             </div>
     )
 }

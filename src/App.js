@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Routes, BrowserRouter, Route, useNavigate, useParams } from 'react-router-dom';
+import { Routes, BrowserRouter, Route, useParams } from 'react-router-dom';
 
 import './App.css';
 // import TextReading from './components/TextReading';
@@ -10,18 +10,16 @@ function App() {
   const [ score, setScore ] = useState(0);
   let { id } = useParams();
 
-  let navigate = useNavigate();
-
-
   return (
     <BrowserRouter>
         <Routes>
+          <Route path ='/:id' element={<Game num={id} setScore={setScore} score={score}/>}></Route>
+          
+        </Routes>
           <div className="App">
-          {/* <Route exact path ='/:id' element={<}> */}
-           <Game setScore={setScore} score={score} />
+           {/* <Game setScore={setScore} score={score} /> */}
            <p>Score : {score}</p>
-    </div>
-    </Routes>
+          </div>
     </BrowserRouter>
   );
 }
