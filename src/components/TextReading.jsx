@@ -4,9 +4,9 @@ import ReactAudioPlayer from 'react-audio-player';
 import {quizzSongs} from './bddSongs';
 
 
-function TextReading() {
-    const [textToRead, setTextToRead] = useState('');
-    const [lyrics, setLyrics]= useState(quizzSongs[0].lyricsFR);
+function TextReading({lyrics}) {
+    // const [ textToRead, setTextToRead ] = useState('');
+    // const [lyrics, setLyrics]= useState(quizzSongs[0].lyricsFR);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
 

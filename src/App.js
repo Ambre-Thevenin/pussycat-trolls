@@ -25,9 +25,3 @@ function App() {
 }
 
 export default App;
-
-
-{/* <Route path="/:id" element={<Game songId={quizzSongs[id]} />} /> */}
-
-
-{/* <iframe width="560" height="315" src="https://www.youtube.com/embed/XqZsoesa55w?start=27" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}

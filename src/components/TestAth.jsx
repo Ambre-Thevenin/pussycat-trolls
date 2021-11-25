@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {quizzSongs} from './bddSongs';
 import {useNavigate, useParams} from 'react-router-dom';
+import TextReading from './TextReading';
 
 
 function Game({ setScore, score , num}) {
@@ -50,13 +51,14 @@ function Game({ setScore, score , num}) {
         <div>
             {isPlaying && song ? 
             <div>
+                <TextReading lyrics={song.lyricsFR} />
                 <h2>Quelle est cette chanson?</h2>
                 <div onClick={()=>displayVideo(song.title)}><p>{song.title}</p></div>
                 <div onClick={()=>displayVideo(song.wrongResponse1)}><p>{song.wrongResponse1}</p></div>
                 <div onClick={()=>displayVideo(song.wrongResponse2)}><p>{song.wrongResponse2}</p></div></div> : 
                 <div>
                     <h2>{message}</h2>
-                    <iframe width="560" height="315" src={userChoice} title="YouTube video player" frameborder="0" allow="autoplay clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src={userChoice} title="Dailymotion" frameborder="0" allow="autoplay clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <button onClick={goForward}> GO </button>
                 </div>
                 }
