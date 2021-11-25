@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ReactAudioPlayer from 'react-audio-player';
+
 import {quizzSongs} from './bddSongs';
 
 
@@ -13,11 +15,7 @@ function TextReading() {
     return (
         <div>
             <h1>Test Audio</h1>
-            <audio controls autoplay>
-            <source src={text} type="audio/wav" />
-                Can't touch this
-            </audio>
-
+            <ReactAudioPlayer src={text} autoPlay controls />
         </div>
     )
 
