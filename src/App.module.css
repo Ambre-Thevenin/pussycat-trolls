@@ -205,18 +205,25 @@ iframe::-webkit-scrollbar {
 
 .logo{
   display: flex;
-  z-index: 3;
-  margin-top: -18vh;
+  z-index: 100;
   margin-left: 2vh;
-  width: 420px;
+  width: 370px;
   height: auto;
   position: absolute;
 }
 
 .footer{
   position: absolute;
-  z-index: 3;
-  margin-top: 90vh;
-  margin-left: 18vh;
-  width: 400px;
+  z-index: 100;
+  margin-top: 92vh;
+  margin-left: 38vh;
+  width: 490px;
+}
+
+.queen{
+  position: absolute;
+margin-left: 84.5vw;
+margin-top: 10vh;
+  width: 280px;
+  z-index: 100;
 }

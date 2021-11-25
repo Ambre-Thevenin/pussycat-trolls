@@ -5,12 +5,14 @@ import Home from './components/Home'
 import styles from './App.module.css';
 import Logo from './assets/logodiag.png';
 import Footer from './assets/Footer.png';
+import Queen from './assets/queen.png';
 
 function App() {
   return (
   
   <div className={styles.mainContainer}>
     <img src={Logo} alt="test aveugle logo" className={styles.logo} />
+    <img src={Queen} alt="portrait of Queen Elizabeth" className={styles.queen} />
       <div className={styles.background}></div>
       <div className={styles.tv1}>
       <div className={styles.screen1}>

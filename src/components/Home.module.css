@@ -1,17 +1,59 @@
 .HomeTitle{
+   margin-top: 60px;
+   margin-bottom: 20px;
     display: flex;
-justify-content: center;
+    justify-content: center;
     color: #f8B206;
+    font-size: 4em;
 }
 
 .HomeText{
     color: white;
+    font-size: 1.4em;
+    text-align: center;
+    
 }
 
 .HomeSoundSpeaker{
     color: #d8222d;
+    display: flex;
+    margin: auto;
+    width: 80px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 .HomeH2{
-color: #e97C1C;
+color: #d8222d;
+font-size: 2em;
+text-align: center;
+margin-bottom: 30px;
+}
+
+.HomeLi{
+    margin-left: 170px;
+    margin-right: 170px;
+    color: #237ab4;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+
+}
+
+.HomeSpan{
+    color: white;
+}
+
+.HomePlayButton{
+display: flex;
+margin: auto;
+background-color: transparent;
+border: none;
+cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.HomePlayImg{
+    width: 100px;
+    
 }
