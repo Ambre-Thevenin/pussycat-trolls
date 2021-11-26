@@ -1,0 +1,70 @@
+.GameH2{
+    color: #f8B206;
+    justify-content: center;
+    display: flex;
+    font-size: 2em;
+}
+
+.GameTextReading{
+    display: flex;
+    margin: auto;
+}
+
+.GameTextSongDiv{
+    justify-content: center;
+    display: flex;
+}
+
+.GameTextSong{
+    display: flex;
+    color: white;
+    margin-top: 30px;
+    justify-content: center;
+    font-size: 1.4em;
+    border: solid #237ab4 1px;
+    padding: 1px;
+    width: 60%;
+    background-color: #237ab4;
+    border-radius: 10px;
+    box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  100px 100px 80px rgba(0, 0, 0, 0.07)
+;
+}
+
+.GameTextMessage{
+    display: flex;
+    color: #f8b206;
+    margin-top: 60px;
+    margin-left: 55px;
+    margin-right: 55px;
+   justify-content: center;
+   font-size: 2em;
+   margin-bottom: 10px;
+   text-align: center;
+}
+
+.GameTextButtonSong{
+    display: flex;
+    margin-top: 20px;
+    margin: auto;
+    background-color: #ba2184;
+    border-radius: 5px;
+    border: none;
+    width: 30%;
+color: white;
+font-size: 1.3em;
+justify-content: center;
+}
+
+.GameVideoDiv{
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}

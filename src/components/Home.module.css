@@ -1,0 +1,80 @@
+.HomeTitle{
+   margin-top: 80px;
+   margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    color: #f8B206;
+    font-size: 3.5em;
+    animation: lighttext 3s infinite;
+}
+@keyframes lighttext {
+  0% {
+    color: #f8B206;
+  }
+  1% {
+    color: #c28c03;
+  }
+  5% {
+    color: #f8B206;
+  }
+  6% {
+    color: #c28c03;
+  }
+  25% {
+    color: #f8B206;
+  }
+  100% {
+    color: #f8B206;
+  }
+}
+
+.HomeText{
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    
+}
+
+.HomeSoundSpeaker{
+    color: #d8222d;
+    display: flex;
+    margin: auto;
+    width: 60px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.HomeH2{
+color: #d8222d;
+font-size: 2em;
+text-align: center;
+margin-bottom: 10px;
+}
+
+.HomeLi{
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #237ab4;
+    font-size: 1em;
+    margin-bottom: 5px;
+
+}
+
+.HomeSpan{
+    color: white;
+}
+
+.HomePlayButton{
+display: flex;
+margin: auto;
+background-color: transparent;
+border: none;
+cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.HomePlayImg{
+    width: 80px;
+    
+}

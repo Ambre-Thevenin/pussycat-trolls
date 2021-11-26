@@ -1,12 +1,29 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.mainContainer {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
 .background {
-  background-color: #e9e3d4;
+  background-color: #dbaa60;
   background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
   height: 100vh;
   opacity: 0.3;
   position: absolute;
   top: 0;
+  left: 0;
   width: 100vw;
-  z-index: -2;
+  z-index: -900;
+  margin: 0;
 }
 
 .tv1 {
@@ -22,38 +39,11 @@
   justify-content: space-between;
   align-content: right;
   align-items: center;
-  margin: 150px auto;
+  margin: 7vh auto 0 auto;
   position: relative;
   padding: 15px 15px 10px 25px;
-  width: 680px;
-  height: 460px;
-}
-
-.antennas {
-  position: absolute;
-  top: -124px;
-  right: 90px;
-  width: 140px;
-  height: 120px;
-}
-
-.tip {
-  background: #888 radial-gradient(transparent, #555);
-  border-radius: 50%;
-  margin-left: -3px;
-  width: 12px;
-  height: 12px;
-}
-  
-.left {
-  left: 0;
-  transform: rotate(-15deg);
-  background: #888 linear-gradient(90deg, #666, transparent, #666);
-  position: absolute;
-  width: 5px;
-  height: 130px;
-  transform-origin: 0% 0%;
-  z-index: -1;
+  width: 130vh;
+  height: 83vh;
 }
 
 .screen1 {
@@ -77,18 +67,28 @@
   position: relative;
   width: 93%;
   height: 93%;
-  z-index: 2;
+  z-index: 50;
+  animation: light 3s infinite;
 }
-
-iframe {
-  border: 0;
-  position: absolute;
-  top: 0;
-  z-index: 1;
-}
-
-iframe::-webkit-scrollbar {
-  display: none;
+@keyframes light {
+  0% {
+    background: #666 linear-gradient(transparent, #333);
+  }
+  1% {
+    background: rgb(102, 102, 102) linear-gradient(transparent, rgb(63, 63, 63));
+  }
+  5% {
+    background: #666 linear-gradient(transparent, #333);
+  }
+  6% {
+    background: rgb(102, 102, 102) linear-gradient(transparent, rgb(63, 63, 63));
+  }
+  25% {
+    background: #666 linear-gradient(transparent, #333);
+  }
+  100% {
+    background: #666 linear-gradient(transparent, #333);
+  }
 }
 
 .controls {
@@ -122,7 +122,7 @@ iframe::-webkit-scrollbar {
   border-radius: 50%;
   box-shadow: inset 0 8px 2px #555, inset -6px 0 2px #555, inset 0 -6px 2px #555,
     inset 6px 0 2px #555;
-  margin: auto;
+  margin: 15px auto;
   position: relative;
   width: 110px;
   height: 110px;
@@ -141,18 +141,18 @@ iframe::-webkit-scrollbar {
 }
 
 .acdc {
-  font-size: 9pt;
+  font-size: 12pt;
   padding: 5px 10px;
   text-align: right;
 }
 
 .knobLabels {
-  font-size: 6pt;
+  font-size: 10pt;
   display: -webkit-flex;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 4px;
+  margin-top: 14px;
 }
 
 .knobs {
@@ -188,9 +188,9 @@ iframe::-webkit-scrollbar {
 .hole {
   background: #000;
   border: 1px solid #420;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   width: 100%;
-  height: 3px;
+  height: 5px;
 }
 
 .legs {
@@ -213,3 +213,53 @@ iframe::-webkit-scrollbar {
   height: 40px;
 }
 
+.logo{
+  display: flex;
+  z-index: 100;
+  width: 330px;
+  height: auto;
+  position: absolute;
+  animation : neon 10s infinite;
+}
+
+
+.footer{
+  position: absolute;
+  z-index: 100;
+  margin-top: 92vh;
+  margin-left: 42vh;
+  width: 330px;
+}
+
+.queen{
+  position: absolute;
+  margin-left: 87vw;
+  margin-top: 10vh;
+  width: 180px;
+  z-index: 100;
+}
+.score {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e9e3d4;
+  z-index: 50;
+  width: 20vh;
+  height: 20vh;
+  right: 10px;
+  bottom: 150px;
+  font-family: Arial;
+  border: 4px solid #433;
+  border-radius: 25px;
+  box-shadow: inset 0 5px 5px #ddd, inset 5px 0 5px #555, inset -5px 0 5px #555,
+  inset 0 -5px 5px #555;
+}
+.scoreTitle {
+  font-size: 30px;
+  margin-top: 20px;
+}
+.scoreNumbers {
+  font-size: 40px;
+  margin-top: 20px;
+}
