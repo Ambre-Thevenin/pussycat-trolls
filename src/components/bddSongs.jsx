@@ -1,4 +1,4 @@
-const quizzSongs = [
+const sortedQuizzSongs = [
   {
     id: 0,
     title: 'Wake me up before you go go - Wham',
@@ -117,5 +117,7 @@ const quizzSongs = [
     wrongResponse2: 'The sound of silence - Simon & Garfunkel',
     },
   ];
+
+const quizzSongs = sortedQuizzSongs.sort(()=> Math.random() - 0.5);
 
 export {quizzSongs};
