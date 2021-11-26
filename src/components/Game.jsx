@@ -55,17 +55,17 @@ function Game({ setScore, score , num, total, setTotal}) {
         <div>
             {isPlaying && song ? 
             <div>
-                <TimerButton />  
-                <TextReading lyrics={song.lyricsFR} className={styles.TestAthTextReading}/>
-                <h2 className={styles.TestAthH2}>Quelle est cette chanson?</h2>
-                <div onClick={()=>displayVideo(shuffleResponses[0])}><p className={styles.TestAthTextSong}>{shuffleResponses[0]}</p></div>
-                <div onClick={()=>displayVideo(shuffleResponses[1])}><p className={styles.TestAthTextSong}>{shuffleResponses[1]}</p></div>
-                <div onClick={()=>displayVideo(shuffleResponses[2])}><p className={styles.TestAthTextSong}>{shuffleResponses[2]}</p></div>
+                <TimerButton className={styles.GameTextTimer}/>  
+                <TextReading lyrics={song.lyricsFR} className={styles.GameTextReading}/>
+                <h2 className={styles.GameH2}>Quelle est cette chanson?</h2>
+                <div onClick={()=>displayVideo(shuffleResponses[0])} className={styles.GameTextSongDiv}><p className={styles.GameTextSong}>{shuffleResponses[0]}</p></div>
+                <div onClick={()=>displayVideo(shuffleResponses[1])} className={styles.GameTextSongDiv}><p className={styles.GameTextSong}>{shuffleResponses[1]}</p></div>
+                <div onClick={()=>displayVideo(shuffleResponses[2])} className={styles.GameTextSongDiv}><p className={styles.GameTextSong}>{shuffleResponses[2]}</p></div>
                 </div> : 
                 <div>
-                    <h2 className={styles.TestAthTextMessage}>{message}</h2>
-                    <iframe width="560" height="315" src={userChoice} title="Dailymotion" frameborder="0" allow="autoplay clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className={styles.TestAthIFrame}></iframe>
-                    <button onClick={goForward} className={styles.TestAthTextButtonSong}> Prochaine chanson </button>
+                    <h2 className={styles.GameTextMessage}>{message}</h2>
+                    <iframe width="560" height="315" src={userChoice} title="Dailymotion" frameborder="0" allow="autoplay clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className={styles.GameIFrame}></iframe>
+                    <button onClick={goForward} className={styles.GameTextButtonSong}> Prochaine chanson </button>
                 </div>
                 }
             </div>

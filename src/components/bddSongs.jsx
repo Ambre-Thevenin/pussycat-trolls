@@ -33,7 +33,7 @@ const sortedQuizzSongs = [
     goodVideo: 'https://www.youtube.com/watch?v=fJ9rUzIMcZQ',
     wrongVideo: 'https://youtu.be/p_ZxDNZjzVk?t=52',
     wrongResponse1: 'Open your eyes - Snow Patrol',
-    wrongResponse2: 'Poor Boy a Long Way From Home - The Black Keys',
+    wrongResponse2: 'Poor Boy - The Black Keys',
   },
 {
     id: 4,
@@ -42,7 +42,7 @@ const sortedQuizzSongs = [
     goodVideo: 'https://www.youtube.com/watch?v=otCpCn0l4Wo&t=140s',
     wrongVideo: 'https://www.youtube.com/watch?v=V0PisGe66mY&t=36s',
     wrongResponse1: 'Touch me - Samantha Fox',
-    wrongResponse2: 'Boom, Boom, Boom, Boom! - Vengaboys',
+    wrongResponse2: 'Boom, Boom, Boom ! - Vengaboys',
   },
 {
     id: 5,
