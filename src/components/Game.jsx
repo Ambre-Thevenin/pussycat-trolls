@@ -3,6 +3,7 @@ import {quizzSongs} from './bddSongs';
 import {useNavigate, useParams} from 'react-router-dom';
 import TextReading from './TextReading';
 import TimerButton from './timerButton'
+import YoutubeVid from './video';
 import styles from './Game.module.css';
 
 
@@ -55,7 +56,7 @@ function Game({ setScore, score , num, total, setTotal}) {
         <div>
             {isPlaying && song ? 
             <div>
-                <TimerButton className={styles.GameTextTimer}/>  
+                <TimerButton className={styles.GameTextTimer} missed = {displayVideo} song = {song.wrongResponse1}/>  
                 <TextReading lyrics={song.lyricsFR} className={styles.GameTextReading}/>
                 <h2 className={styles.GameH2}>Quelle est cette chanson?</h2>
                 <div onClick={()=>displayVideo(shuffleResponses[0])} className={styles.GameTextSongDiv}><p className={styles.GameTextSong}>{shuffleResponses[0]}</p></div>
@@ -64,7 +65,7 @@ function Game({ setScore, score , num, total, setTotal}) {
                 </div> : 
                 <div>
                     <h2 className={styles.GameTextMessage}>{message}</h2>
-                    <iframe width="560" height="315" src={userChoice} title="Dailymotion" frameborder="0" allow="autoplay clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className={styles.GameIFrame}></iframe>
+                    <YoutubeVid className={styles.GameIFrame} embedId= {userChoice}/>
                     <button onClick={goForward} className={styles.GameTextButtonSong}> Prochaine chanson </button>
                 </div>
                 }

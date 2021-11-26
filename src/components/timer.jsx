@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import styles from './timer.module.css';
 
-export default function Timer() {
+export default function Timer({missed, song}) {
     const [timeLeft, setTimeLeft] = useState(15);
     const [inter, setInter] = useState()
 
@@ -15,6 +15,7 @@ export default function Timer() {
     useEffect(() => {
         if(timeLeft === 0) {
             clearInterval(inter)
+            missed(song)
         }
     },[timeLeft])
 
