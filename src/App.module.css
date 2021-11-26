@@ -68,6 +68,27 @@
   width: 93%;
   height: 93%;
   z-index: 50;
+  animation: light 3s infinite;
+}
+@keyframes light {
+  0% {
+    background: #666 linear-gradient(transparent, #333);
+  }
+  1% {
+    background: rgb(102, 102, 102) linear-gradient(transparent, rgb(63, 63, 63));
+  }
+  5% {
+    background: #666 linear-gradient(transparent, #333);
+  }
+  6% {
+    background: rgb(102, 102, 102) linear-gradient(transparent, rgb(63, 63, 63));
+  }
+  25% {
+    background: #666 linear-gradient(transparent, #333);
+  }
+  100% {
+    background: #666 linear-gradient(transparent, #333);
+  }
 }
 
 .controls {
@@ -198,7 +219,9 @@
   width: 330px;
   height: auto;
   position: absolute;
+  animation : neon 10s infinite;
 }
+
 
 .footer{
   position: absolute;
