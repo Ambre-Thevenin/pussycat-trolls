@@ -54,7 +54,7 @@ function Game({ setScore, score , num}) {
         <div>
             {isPlaying && song ? 
             <div>
-                <TimerButton />  
+                <TimerButton missed = {displayVideo} song = {song.wrongResponse1} />  
                 <TextReading lyrics={song.lyricsFR} className={styles.TestAthTextReading}/>
                 <h2 className={styles.TestAthH2}>Quelle est cette chanson?</h2>
                 <div onClick={()=>displayVideo(shuffleResponses[0])}><p className={styles.TestAthTextSong}>{shuffleResponses[0]}</p></div>
