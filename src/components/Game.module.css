@@ -39,7 +39,7 @@
 .GameTextMessage{
     display: flex;
     color: #f8b206;
-    margin-top: 80px;
+    margin-top: 60px;
     margin-left: 55px;
     margin-right: 55px;
    justify-content: center;
@@ -60,8 +60,10 @@ font-size: 1.3em;
 justify-content: center;
 }
 
-.GameIFrame{
+.GameVideoDiv{
     display: flex;
     margin: auto;
-margin-bottom: 20px;    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
 }
