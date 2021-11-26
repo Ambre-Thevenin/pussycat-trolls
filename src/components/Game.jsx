@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {quizzSongs} from './bddSongs';
 import {useNavigate, useParams} from 'react-router-dom';
 import TextReading from './TextReading';
+import styles from './Game.module.css';
 
 
 function Game({ setScore, score , num}) {
@@ -37,7 +38,7 @@ function Game({ setScore, score , num}) {
     
             else {
                 setUserChoice(song.wrongVideo);
-                setMessage('Perdu...mais voici une chanson pour vous consoler');
+                setMessage('Perdu... Mais voici une chanson pour vous consoler !');
                 }
         }
 
@@ -52,16 +53,17 @@ function Game({ setScore, score , num}) {
         <div>
             {isPlaying && song ? 
             <div>
-                <TextReading lyrics={song.lyricsFR} />
-                <h2>Quelle est cette chanson?</h2>
-                <div onClick={()=>displayVideo(shuffleResponses[0])}><p>{shuffleResponses[0]}</p></div>
-                <div onClick={()=>displayVideo(shuffleResponses[1])}><p>{shuffleResponses[1]}</p></div>
-                <div onClick={()=>displayVideo(shuffleResponses[2])}><p>{shuffleResponses[2]}</p></div>
+
+                <TextReading lyrics={song.lyricsFR} className={styles.TestAthTextReading}/>
+                <h2 className={styles.TestAthH2}>Quelle est cette chanson?</h2>
+                <div onClick={()=>displayVideo(shuffleResponses[0])}><p className={styles.TestAthTextSong}>{shuffleResponses[0]}</p></div>
+                <div onClick={()=>displayVideo(shuffleResponses[1])}><p className={styles.TestAthTextSong}>{shuffleResponses[1]}</p></div>
+                <div onClick={()=>displayVideo(shuffleResponses[2])}><p className={styles.TestAthTextSong}>{shuffleResponses[2]}</p></div>
                 </div> : 
                 <div>
-                    <h2>{message}</h2>
-                    <iframe width="560" height="315" src={userChoice} title="Dailymotion" frameborder="0" allow="autoplay clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <button onClick={goForward}> Prochaine chanson </button>
+                    <h2 className={styles.TestAthTextMessage}>{message}</h2>
+                    <iframe width="560" height="315" src={userChoice} title="Dailymotion" frameborder="0" allow="autoplay clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className={styles.TestAthIFrame}></iframe>
+                    <button onClick={goForward} className={styles.TestAthTextButtonSong}> Prochaine chanson </button>
                 </div>
                 }
             </div>
