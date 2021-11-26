@@ -3,6 +3,7 @@ import {quizzSongs} from './bddSongs';
 import {useNavigate, useParams} from 'react-router-dom';
 import TextReading from './TextReading';
 import TimerButton from './timerButton'
+import YoutubeVid from './video';
 import styles from './Game.module.css';
 
 
@@ -63,7 +64,7 @@ function Game({ setScore, score , num}) {
                 </div> : 
                 <div>
                     <h2 className={styles.TestAthTextMessage}>{message}</h2>
-                    <iframe width="560" height="315" src={userChoice} title="Dailymotion" frameborder="0" allow="autoplay clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className={styles.TestAthIFrame}></iframe>
+                    <YoutubeVid embedId= {userChoice}/>
                     <button onClick={goForward} className={styles.TestAthTextButtonSong}> Prochaine chanson </button>
                 </div>
                 }
