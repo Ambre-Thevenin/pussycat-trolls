@@ -3,4 +3,6 @@
 }
 .timer {
     font-size: 10vh;
+    display: flex;
+    justify-content: center;
 }
