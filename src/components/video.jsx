@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 const YoutubeVid = ({ embedId }) => (
     <iframe
-    width="500"
-    height="300"
+    width="650"
+    height="325"
       src={`https://www.youtube.com/embed/${embedId}`}
       frameBorder="0"
       display="flex"
