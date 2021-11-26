@@ -60,8 +60,10 @@ font-size: 1.3em;
 justify-content: center;
 }
 
-.GameIFrame{
+.GameVideoDiv{
     display: flex;
     margin: auto;
-margin-bottom: 20px;    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
 }

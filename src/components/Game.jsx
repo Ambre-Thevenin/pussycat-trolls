@@ -65,7 +65,9 @@ function Game({ setScore, score , num, total, setTotal}) {
                 </div> : 
                 <div>
                     <h2 className={styles.GameTextMessage}>{message}</h2>
-                    <YoutubeVid className={styles.GameIFrame} embedId= {userChoice}/>
+                    <div className={styles.GameVideoDiv}>
+                    <YoutubeVid embedId= {userChoice}/>
+                    </div>
                     <button onClick={goForward} className={styles.GameTextButtonSong}> Prochaine chanson </button>
                 </div>
                 }
