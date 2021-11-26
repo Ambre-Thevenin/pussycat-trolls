@@ -2,7 +2,11 @@
    border-radius: 6vh;
 }
 .timer {
-    font-size: 10vh;
+    font-size: 12vh;
     display: flex;
     justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom:  30px;
 }

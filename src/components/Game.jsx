@@ -7,7 +7,7 @@ import YoutubeVid from './video';
 import styles from './Game.module.css';
 
 
-function Game({ setScore, score , num}) {
+function Game({ setScore, score , num, total, setTotal}) {
     let navigate = useNavigate();
     let { id } = useParams();
 
@@ -32,6 +32,7 @@ function Game({ setScore, score , num}) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     function displayVideo(choice) {
             setIsPlaying(!isPlaying);
+            setTotal(total +1);
             if (choice === song.title) {
                setUserChoice(song.goodVideo);
                setMessage('Bon jeu ! (good game)')
@@ -55,17 +56,17 @@ function Game({ setScore, score , num}) {
         <div>
             {isPlaying && song ? 
             <div>
-                <TimerButton missed = {displayVideo} song = {song.wrongResponse1} />  
-                <TextReading lyrics={song.lyricsFR} className={styles.TestAthTextReading}/>
-                <h2 className={styles.TestAthH2}>Quelle est cette chanson?</h2>
-                <div onClick={()=>displayVideo(shuffleResponses[0])}><p className={styles.TestAthTextSong}>{shuffleResponses[0]}</p></div>
-                <div onClick={()=>displayVideo(shuffleResponses[1])}><p className={styles.TestAthTextSong}>{shuffleResponses[1]}</p></div>
-                <div onClick={()=>displayVideo(shuffleResponses[2])}><p className={styles.TestAthTextSong}>{shuffleResponses[2]}</p></div>
+                <TimerButton className={styles.GameTextTimer} missed = {displayVideo} song = {song.wrongResponse1}/>  
+                <TextReading lyrics={song.lyricsFR} className={styles.GameTextReading}/>
+                <h2 className={styles.GameH2}>Quelle est cette chanson?</h2>
+                <div onClick={()=>displayVideo(shuffleResponses[0])} className={styles.GameTextSongDiv}><p className={styles.GameTextSong}>{shuffleResponses[0]}</p></div>
+                <div onClick={()=>displayVideo(shuffleResponses[1])} className={styles.GameTextSongDiv}><p className={styles.GameTextSong}>{shuffleResponses[1]}</p></div>
+                <div onClick={()=>displayVideo(shuffleResponses[2])} className={styles.GameTextSongDiv}><p className={styles.GameTextSong}>{shuffleResponses[2]}</p></div>
                 </div> : 
                 <div>
-                    <h2 className={styles.TestAthTextMessage}>{message}</h2>
-                    <YoutubeVid embedId= {userChoice}/>
-                    <button onClick={goForward} className={styles.TestAthTextButtonSong}> Prochaine chanson </button>
+                    <h2 className={styles.GameTextMessage}>{message}</h2>
+                    <YoutubeVid className={styles.GameIFrame} embedId= {userChoice}/>
+                    <button onClick={goForward} className={styles.GameTextButtonSong}> Prochaine chanson </button>
                 </div>
                 }
             </div>

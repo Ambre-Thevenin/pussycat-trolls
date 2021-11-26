@@ -9,7 +9,6 @@ function TextReading({lyrics}) {
 
     return (
         <div className={styles.ReactAudioPlayerDiv}>
-            <h1 className={styles.TextReadingH1}>Test Audio</h1>
             <ReactAudioPlayer src={text} autoPlay controls className={styles.ReactAudioPlayer}/>
         </div>
     )

@@ -1,4 +1,4 @@
-const quizzSongs = [
+const sortedQuizzSongs = [
   {
     id: 0,
     title: 'Wake me up before you go go - Wham',
@@ -33,7 +33,7 @@ const quizzSongs = [
     goodVideo: 'fJ9rUzIMcZQ',
     wrongVideo: 'p_ZxDNZjzVk?t=52',
     wrongResponse1: 'Open your eyes - Snow Patrol',
-    wrongResponse2: 'Poor Boy a Long Way From Home - The Black Keys',
+    wrongResponse2: 'Poor Boy - The Black Keys',
   },
 {
     id: 4,
@@ -42,7 +42,7 @@ const quizzSongs = [
     goodVideo: 'otCpCn0l4Wo?t=140',
     wrongVideo: 'V0PisGe66mY?t=36',
     wrongResponse1: 'Touch me - Samantha Fox',
-    wrongResponse2: 'Boom, Boom, Boom, Boom! - Vengaboys',
+    wrongResponse2: 'Boom, Boom, Boom ! - Vengaboys',
   },
 {
     id: 5,
@@ -117,5 +117,7 @@ const quizzSongs = [
     wrongResponse2: 'The sound of silence - Simon & Garfunkel',
     },
   ];
+
+const quizzSongs = sortedQuizzSongs.sort(()=> Math.random() - 0.5);
 
 export {quizzSongs};
