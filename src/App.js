@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Routes, BrowserRouter, Route, useParams } from 'react-router-dom';
+import { Routes, Link, Route, useParams } from 'react-router-dom';
 
 import Game from './components/Game'
 import Home from './components/Home'
@@ -18,7 +18,11 @@ function App() {
 
 
   <div className={styles.mainContainer}>
-    <img src={Logo} alt="test aveugle logo" className={styles.logo} />
+    <nav>
+      <Link to={'/'}>
+        <img src={Logo} alt="test aveugle logo" className={styles.logo} />
+      </Link>
+    </nav>
     <img src={Queen} alt="portrait of Queen Elizabeth" className={styles.queen} />
     <div className={styles.score}>
       <p className={styles.scoreTitle}>Score :</p>
@@ -28,12 +32,10 @@ function App() {
       <div className={styles.tv1}>
       <div className={styles.screen1}>
         <div className={styles.glass1}>
-        <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<Home />}></Route>
           <Route path ='/:id' element={<Game num={id} setScore={setScore} score={score} setTotal={setTotal} total={total}/>}></Route>
         </Routes>
-        </BrowserRouter>
         </div>
       </div>
       <div className={styles.controls}>
