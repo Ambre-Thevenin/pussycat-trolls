@@ -7,18 +7,18 @@
 
 .TextReadingH1{
     color: #f8b206;
-    margin-top: 100px;
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 3.5em;
-    margin-bottom: 70px;
+    font-size: 3em;
+    margin-bottom: 50px;
 }
 
 .ReactAudioPlayer{
     display: flex;
     width: 40%;
     margin: auto;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 
