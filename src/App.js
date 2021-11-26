@@ -11,6 +11,7 @@ import Queen from './assets/queen.png';
 
 function App() {
   const [ score, setScore ] = useState(0);
+  const [ total, setTotal ] = useState(0);
   let { id } = useParams();
 
   return (
@@ -19,6 +20,10 @@ function App() {
   <div className={styles.mainContainer}>
     <img src={Logo} alt="test aveugle logo" className={styles.logo} />
     <img src={Queen} alt="portrait of Queen Elizabeth" className={styles.queen} />
+    <div className={styles.score}>
+      <p className={styles.scoreTitle}>Score :</p>
+      <p className={styles.scoreNumbers}>{score} / {total}</p>
+    </div>
       <div className={styles.background}></div>
       <div className={styles.tv1}>
       <div className={styles.screen1}>
@@ -26,7 +31,7 @@ function App() {
         <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<Home />}></Route>
-          <Route path ='/:id' element={<Game num={id} setScore={setScore} score={score}/>}></Route>
+          <Route path ='/:id' element={<Game num={id} setScore={setScore} score={score} setTotal={setTotal} total={total}/>}></Route>
         </Routes>
         </BrowserRouter>
         </div>
@@ -67,7 +72,6 @@ function App() {
           </div>
         </div>
       <div className={styles.legs}></div>
-      <p>Score : {score}</p>
       <img src={Footer} alt="message with love" className={styles.footer} />
     </div>
   </div>

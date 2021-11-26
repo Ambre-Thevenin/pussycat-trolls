@@ -5,7 +5,7 @@ import TextReading from './TextReading';
 import styles from './Game.module.css';
 
 
-function Game({ setScore, score , num}) {
+function Game({ setScore, score , num, total, setTotal}) {
     let navigate = useNavigate();
     let { id } = useParams();
 
@@ -30,6 +30,7 @@ function Game({ setScore, score , num}) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     function displayVideo(choice) {
             setIsPlaying(!isPlaying);
+            setTotal(total +1);
             if (choice === song.title) {
                setUserChoice(song.goodVideo);
                setMessage('Bon jeu ! (good game)')
