@@ -5,6 +5,27 @@
     justify-content: center;
     color: #f8B206;
     font-size: 3.5em;
+    animation: lighttext 3s infinite;
+}
+@keyframes lighttext {
+  0% {
+    color: #f8B206;
+  }
+  1% {
+    color: #c28c03;
+  }
+  5% {
+    color: #f8B206;
+  }
+  6% {
+    color: #c28c03;
+  }
+  25% {
+    color: #f8B206;
+  }
+  100% {
+    color: #f8B206;
+  }
 }
 
 .HomeText{
