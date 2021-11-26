@@ -35,13 +35,13 @@ function Game({ setScore, score , num, total, setTotal}) {
             setTotal(total +1);
             if (choice === song.title) {
                setUserChoice(song.goodVideo);
-               setMessage('Bon jeu ! (good game)')
+               setMessage('Bon jeu ! C\'était bien ça :')
                setScore(score +1);
                 }
     
             else {
                 setUserChoice(song.wrongVideo);
-                setMessage('Perdu... Mais voici une chanson pour vous consoler !');
+                setMessage('Mauvaise réponse. Tu mérites ça :');
                 }
         }
 
