@@ -1,4 +1,4 @@
-#Welcome to Test-Aveugle's repo !
+# Welcome to Test-Aveugle's repo !
 
 To give you some context, this project has been created during a 24h coding Hackathon, organized by Wild Code School, whose theme was MUSIC. The Pussycat Trolls' team was formed by Charlotte Menard, Melissa Olas, Sophie Lepert and I, Ambre Thevenin. 
 This project uses : 
